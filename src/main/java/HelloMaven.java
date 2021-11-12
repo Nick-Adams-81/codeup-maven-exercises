@@ -10,10 +10,16 @@ public class HelloMaven {
         System.out.println("Please enter a word[s]");
         String res = sc.nextLine();
         System.out.println("You entered " + res);
-        System.out.println("is your entry numeric? " + StringUtils.isNumeric(res));
+//        System.out.println("is your entry numeric? " + StringUtils.isNumeric(res));
+
+        if(StringUtils.isNumeric(res)) {
+            System.out.println("your entry " + res + " is numeric");
+        } else {
+            System.out.println("Your entry " + res + " is not numeric");
+        }
 
         res = StringUtils.swapCase(res);
-        System.out.println("Your input w/ swapped case is:" + res);
+        System.out.println("Your input w/ swapped case is: " + res);
         res = StringUtils.reverse(res);
         System.out.println("your input reversed is: " + res);
 

@@ -40,8 +40,6 @@ public class MyFirstTest {
     @Test
     public void testIfStringContains() {
         String language = "PHP";
-        language.contains("H"); // use assertTrue for this statement
-        language.contains("J"); // use assertFalse for this statement
 
         assertTrue(language.contains("H"));
         assertFalse(language.contains("J"));

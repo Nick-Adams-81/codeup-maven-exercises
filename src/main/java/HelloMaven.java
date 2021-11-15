@@ -6,22 +6,36 @@ public class HelloMaven {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter a word[s]");
-        String res = sc.nextLine();
-        System.out.println("You entered " + res);
-//        System.out.println("is your entry numeric? " + StringUtils.isNumeric(res));
 
-        if(StringUtils.isNumeric(res)) {
-            System.out.println("your entry " + res + " is numeric");
-        } else {
-            System.out.println("Your entry " + res + " is not numeric");
-        }
+        boolean confirm;
 
-        res = StringUtils.swapCase(res);
-        System.out.println("Your input w/ swapped case is: " + res);
-        res = StringUtils.reverse(res);
-        System.out.println("your input reversed is: " + res);
+        do {
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Please enter something...");
+            String res = sc.nextLine();
+            System.out.println("You entered " + res);
+
+            if (StringUtils.isNumeric(res)) {
+                System.out.println("your entry " + res + " is numeric");
+            } else {
+                System.out.println("Your entry " + res + " is not numeric");
+            }
+
+            res = StringUtils.reverse(res);
+            System.out.println("your input reversed is: " + res);
+
+            res = StringUtils.swapCase(res);
+            System.out.println("Your input w/ swapped case is: " + res);
+
+            System.out.println("Continue?[y/n]");
+            String yOrN = sc.nextLine();
+            confirm = yOrN.equalsIgnoreCase("y");
+
+        } while(confirm);
+
+        // the critical drinker reference...
+        System.out.println("That's all I've got for today, go away now!");
 
 
     }
